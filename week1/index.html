@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>履歷設計</title>
+  <style>
+    html,
+    body,
+    div,
+    span,
+    applet,
+    object,
+    iframe,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    blockquote,
+    pre,
+    a,
+    abbr,
+    acronym,
+    address,
+    big,
+    cite,
+    code,
+    del,
+    dfn,
+    em,
+    img,
+    ins,
+    kbd,
+    q,
+    s,
+    samp,
+    small,
+    strike,
+    strong,
+    sub,
+    sup,
+    tt,
+    var,
+    b,
+    u,
+    i,
+    center,
+    dl,
+    dt,
+    dd,
+    ol,
+    ul,
+    li,
+    fieldset,
+    form,
+    label,
+    legend,
+    table,
+    caption,
+    tbody,
+    tfoot,
+    thead,
+    tr,
+    th,
+    td,
+    article,
+    aside,
+    canvas,
+    details,
+    embed,
+    figure,
+    figcaption,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    output,
+    ruby,
+    section,
+    summary,
+    time,
+    mark,
+    audio,
+    video {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      font: inherit;
+      vertical-align: baseline;
+    }
+
+    /* HTML5 display-role reset for older browsers */
+    article,
+    aside,
+    details,
+    figcaption,
+    figure,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    section {
+      display: block;
+    }
+
+    body {
+      line-height: 1;
+    }
+
+    ol,
+    ul {
+      list-style: none;
+    }
+
+    blockquote,
+    q {
+      quotes: none;
+    }
+
+    blockquote:before,
+    blockquote:after,
+    q:before,
+    q:after {
+      content: '';
+      content: none;
+    }
+
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+
+    /* css reset end */
+
+    *,*::before,*::after {
+      box-sizing: border-box;
+    }
+    html,body{
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    body {
+      font-size: 24px;
+      line-height: 36px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .intro-name {
+      font-family: Andale Mono, sans-serif;
+      font-size: 80px;
+      line-height: 90px;
+      border-bottom: 2px solid #000000;
+      padding-top: 48px;
+      padding-bottom: 24px;
+    }
+
+    .title {
+      font-weight: bold;
+      font-size: 32px;
+      line-height: 45px;
+      border-bottom: 1px solid #000000;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+    }
+
+    .subtitle {
+      font-size: 24px;
+      line-height: 32px;
+      color: #A00404;
+      margin-left: 16px;
+    }
+
+    .skills {
+      position: relative;
+    }
+
+    .skills::before {
+      content: '';
+      position: absolute;
+      background-color: #96A9C4;
+      right: 0;
+      left: 0;
+      top: 71px;
+      bottom: 65px;
+      z-index: -1;
+    }
+
+    .skills-content {
+      padding: 24px 102px 56px 102px;
+      /* display: flex;
+      flex-direction: column; */
+      /* align-items: center; */
+    }
+
+    .skills-content ul {
+      margin: 0 auto;
+      width: 216px;
+    }
+
+    .dot,
+    .line {
+      position: relative;
+    }
+
+    .dot::before {
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      left: 16px;
+      transform: translateY(50%);
+      background-color: #96A9C4;
+    }
+
+    .line::before {
+      content: '';
+      position: absolute;
+      width: 1px;
+      top: 16px;
+      bottom: 16px;
+      left: 24px;
+      background-color: #96A9C4;
+    }
+
+    .text-p {
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    .text-white {
+      color: white;
+    }
+
+    .border-white {
+      border-bottom: 1px solid white;
+    }
+
+    .bg-dark {
+      background-color: #415165;
+      color: white;
+      border: white;
+    }
+
+    .text-link {
+      text-decoration: none;
+      display: block;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .text-lighter {
+      font-weight: lighter;
+    }
+
+    .text-bolder {
+      font-weight: bold;
+    }
+
+    .w-50 {
+      width: 50%;
+    }
+
+    .px-1 {
+      padding: 8px 0;
+    }
+
+    .pl-6 {
+      padding-left: 48px;
+    }
+
+    .ml-4 {
+      margin-left: 32px;
+    }
+
+    .mb-2 {
+      margin-bottom: 16px;
+    }
+
+    .mb-3 {
+      margin-bottom: 24px;
+    }
+
+    .mb-4 {
+      margin-bottom: 32px;
+    }
+
+    .mb-5 {
+      margin-bottom: 40px;
+    }
+
+    .mb-6 {
+      margin-bottom: 48px;
+    }
+
+    .mb-9 {
+      margin-bottom: 72px;
+    }
+
+    .d-flex {
+      display: flex;
+    }
+
+    .justify-center {
+      justify-content: center;
+    }
+
+    footer {
+      padding: 24px 0 48px 0;
+    }
+
+    .skills-content ul {
+      border-left: 1px solid #96A9C4;
+      padding-left: 24px;
+    }
+  </style>
+</head>
+
+<body>
+
+    <header class="intro container">
+      <h1 class="intro-name mb-6">Joanne<br />Chen</h1>
+      <img src="https://pentwo.github.io/hexschool-live-course/week-1/images/photo-1536180931879-fd2d652efddc.png"
+        alt="intro-img" class="mb-6">
+    </header>
+
+    <main>
+      <!-- 個人資料 -->
+      <section class="profile container mb-9">
+        <h2 class="title">個人資料<span class="subtitle">PROFILE</span></h2>
+        <p class="dot pl-6 mb-3">陳久安 Joanne Chen<br>1997-<br>應屆畢業生／接案設計師／UI 設計實習生</p>
+        <p class="pl-6">UI 設計修行中／立志當斜槓青年<br>獨立接案，內容涵蓋：<br>品牌規劃、視覺設計、編輯設計、標準字、物件及印刷品設計等。</p>
+      </section>
+
+      <!-- 學歷 -->
+      <section class="education container mb-9">
+        <h2 class="title">學歷<span class="subtitle">EDUCATION</span></h2>
+        <ul class="line">
+          <li class="dot pl-6 mb-4">
+            國立六角師範大學 視覺設計學系 學士學位 | 2016－2020
+          </li>
+          <li class="dot pl-6">
+            國立六腳高級中學 美術班 | 2013－2016
+          </li>
+        </ul>
+      </section>
+
+      <!-- 技能 -->
+      <section class="skills mb-9 p-3">
+        <div class="skills-content container bg-dark">
+          <h2 class="title border-white text-center">
+            技能<span class="subtitle text-white">SKILLS</span>
+          </h2>
+          <ul class="text-lighter">
+            <li class="mb-2">Adobe Photoshop</li>
+            <li class="mb-2">Adobe Illustrator</li>
+            <li class="mb-2">Adobe XD</li>
+            <li class="mb-2">Adobe Indesign</li>
+            <li class="mb-2">C4D</li>
+            <li class="mb-2">Adobe Premiere</li>
+            <li>語言：中文、英文</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 工作經驗 -->
+      <section class="work container mb-9">
+        <h2 class="title">工作經驗<span class="subtitle">WORK EXPERIENCE</span></h2>
+        <h3 class="text-bolder">六角學院 視覺設計實習生 | 2019/07－2020/06</h3>
+        <img class="px-1" src="https://pentwo.github.io/hexschool-live-course/week-1/images/hexschool.svg"
+          alt="hexschool-logo">
+        <p class="text-lighter mb-4 w-50 text-p">在六角學院長達一年的實習中，前期藉由公司課程掌握 HTML, CSS, Adobe
+          XD，設計給學員使用的名片設計教材，並參與六角週年活動，設計各式周邊商品及活動網路宣傳圖。後期進入 UI 設計範疇，設計六角共筆部落格
+          - W3HexSchool、六角發案服務網介面設計、供給學員的教案- RWD官方網站設計，並設計各式網頁活動宣傳圖。</p>
+        <ul>
+          <li class="text-bolder mb-4">獨立接案 Hao Jun 酒標設計 | 2019</li>
+          <li class="text-bolder mb-4">獨立接案 Exulans 酒標設計 | 2019</li>
+          <li class="text-bolder mb-4">獨立接案 桃園平鎮市民健走活動提案 | 2019</li>
+          <li>
+            <p class="text-bolder">Simtree 興趣咖啡 工讀生 | 2018－2019</p>
+            <img
+              src="https://pentwo.github.io/hexschool-live-course/week-1/images/0m019bad127251c64d056cbf4e45b76049a054a7ecd124.png"
+              alt="simtree-logo" class="px-1">
+            <p class="text-lighter text-p">擔任外場及吧台服務生，學習咖啡相關知識。</p>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="contact bg-dark text-center">
+      <div class="container">
+        <h2 class="title border-white">聯絡方式<span class="subtitle text-white">CONTACT METHOD</span></h2>
+        <ul class="text-lighter mb-3">
+          <li class="mb-2">Mail：xxxd@hexschool.com</li>
+          <li class="mb-2">Phone：0910123456</li>
+          <li class="mb-2">Kaohsiung, Taiwan</li>
+          <li class="mb-2"><a href="#" class="text-link text-white">作品連結：https://www.behance.net/xxxdddddd</a></li>
+          <ul class="d-flex justify-center">
+            <li>
+              <a href="#"><img src="https://yuu-chien.github.io/Hex-liveStream-course/img/fb.svg" alt="fb-icon"></a>
+            </li>
+            <li style="padding: 0 24px;">
+              <a href="#"><img src="https://yuu-chien.github.io/Hex-liveStream-course/img/ig.svg" alt="ig-icon"></a>
+            </li>
+            <li>
+              <a href="#"><img src="https://yuu-chien.github.io/Hex-liveStream-course/img/line.svg" alt="line-icon"></a>
+            </li>
+          </ul>
+        </ul>
+      </div>
+    </footer>
+
+</body>
+
+<!-- 分三塊寫 header/main/footer -->
+<!-- 每塊都獨立 -->
+
+</html>

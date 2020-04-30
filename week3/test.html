@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    html,
+    body,
+    div,
+    span,
+    applet,
+    object,
+    iframe,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    blockquote,
+    pre,
+    a,
+    abbr,
+    acronym,
+    address,
+    big,
+    cite,
+    code,
+    del,
+    dfn,
+    em,
+    img,
+    ins,
+    kbd,
+    q,
+    s,
+    samp,
+    small,
+    strike,
+    strong,
+    sub,
+    sup,
+    tt,
+    var,
+    b,
+    u,
+    i,
+    center,
+    dl,
+    dt,
+    dd,
+    ol,
+    ul,
+    li,
+    fieldset,
+    form,
+    label,
+    legend,
+    table,
+    caption,
+    tbody,
+    tfoot,
+    thead,
+    tr,
+    th,
+    td,
+    article,
+    aside,
+    canvas,
+    details,
+    embed,
+    figure,
+    figcaption,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    output,
+    ruby,
+    section,
+    summary,
+    time,
+    mark,
+    audio,
+    video {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      font: inherit;
+      vertical-align: baseline;
+    }
+
+    /* HTML5 display-role reset for older browsers */
+    article,
+    aside,
+    details,
+    figcaption,
+    figure,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    section {
+      display: block;
+    }
+
+    body {
+      line-height: 1;
+    }
+
+    ol,
+    ul {
+      list-style: none;
+    }
+
+    blockquote,
+    q {
+      quotes: none;
+    }
+
+    blockquote:before,
+    blockquote:after,
+    q:before,
+    q:after {
+      content: '';
+      content: none;
+    }
+
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+
+    /* css reset end */
+    body {
+      background: #f0f0f0;
+    }
+
+    .container {
+      width: 375px;
+      margin: 0 auto;
+      background: white;
+
+    }
+
+    .header {
+      text-align: center;
+      background: #AA0601;
+      position: relative;
+      padding: 10px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .ham-icon {
+      position: absolute;
+      left: 13px;
+      color: #FFFFFF;
+    }
+
+    .dropdown {
+      position: absolute;
+      left: 0;
+      top: 100%;
+      width: 100%;
+      max-height: 0px;
+      transition: all 0.8s;
+      overflow: hidden;
+      z-index: 120;
+    }
+
+    .dropdown.active {
+      max-height: 200px;
+    }
+
+    .dropdown li a {
+      display: block;
+      background: #AA0601;
+      color: #FFFFFF;
+      border-top: 1px solid #FFFFFF;
+      padding: 16px 0;
+      text-decoration: none;
+    }
+
+    .dropdown li a:hover {
+      background: #8f0400;
+    }
+
+    .banner {
+      position: relative;
+    }
+
+    .banner-title {
+      position: absolute;
+      margin-left: 11px;
+      bottom: 0px;
+      font-size: 28px;
+      line-height: 1.8;
+    }
+
+    .content {
+      padding: 24px 11px;
+    }
+
+    .content h3 {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 16px;
+    }
+
+    .card-item {
+      border: 1px solid #000000;
+    }
+
+    .card-item-header {
+      padding: 16px;
+      border-bottom: 1px solid #000000;
+    }
+
+    .card-item-header a {
+      text-decoration: none;
+      color: black;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .card-item-header h4 {
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: bold;
+    }
+
+    .card-item-body {
+      background-color: #F2F2F2;
+      padding: 16px;
+      font-size: 14px;
+      line-height: 21px;
+    }
+
+    .card-item:not(.active) .up {
+      display: none;
+    }
+
+    .card-item.active .down {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <a href="#" class="ham-icon">
+        <i class="fas fa-bars ">111</i>
+      </a>
+      <img
+        src="https://firebasestorage.googleapis.com/v0/b/tzuhui-10c1e.appspot.com/o/others%2F202004%2F1587551913424-logo-new_%E5%B7%A5%E4%BD%9C%E5%8D%80%E5%9F%9F%201.png?alt=media&token=7f7e11bb-8470-4bec-8b77-ebda26cb6a76"
+        alt="">
+      <ul class="dropdown">
+        <li><a href="#">系列鏡框</a></li>
+        <li><a href="#">門市據點</a></li>
+        <li><a href="#">部落格</a></li>
+        <li><a href="#">常見問題</a></li>
+      </ul>
+    </div>
+    <div class="banner">
+      <img
+        src="https://firebasestorage.googleapis.com/v0/b/tzuhui-10c1e.appspot.com/o/others%2F202004%2F1587613772197-72.png?alt=media&token=8d10903b-cb76-44bb-af2b-e256aa80c4b5"
+        alt="" srcset="">
+      <h2 class="banner-title">常見問題</h2>
+    </div>
+    <div class="content">
+      <h3>我想詢問配鏡問題</h3>
+
+      <ul class="card">
+        <li class="card-item">
+          <div class="card-item-header">
+            <a href="#">
+              <h4>Q1. 請問可否自備鏡框單配鏡片？</h4>
+              <img class="down"
+                src="https://firebasestorage.googleapis.com/v0/b/tzuhui-10c1e.appspot.com/o/others%2F202004%2F1587695028692-ic_keyboard_arrow_up_24px.svg?alt=media&token=538d0f43-c8ac-4443-a60e-1558b37c05b4"
+                alt="">
+              <img class="up"
+                src="https://firebasestorage.googleapis.com/v0/b/tzuhui-10c1e.appspot.com/o/others%2F202004%2F1587695018338-ic_keyboard_arrow_up_24px%20(1).svg?alt=media&token=3d310376-7621-47cd-9617-0c2eb588a504"
+                alt="">
+            </a>
+          </div>
+          <div class="card-item-body">
+            <p>A1.我牌鏡框搭配薄型非球面鏡片1480元，搭配功能型鏡片則依鏡片種類加價購買。當日購買JINS盒裝眼鏡，搭配薄型非球面鏡片980元(隔日後則為1480元)，搭配功能型鏡片則依鏡片種類加價購買。
+              他牌鏡框，搭配薄型非球面鏡片1980元，搭配功能型鏡片則依鏡片種類加價購買。</p>
+          </div>
+        </li>
+        <li class="card-item">
+          <div class="card-item-header">
+            <a href="#">
+              <h4>Q2. 請問可否自備鏡框單配鏡片？</h4>
+              <img class="down"
+                src="https://firebasestorage.googleapis.com/v0/b/tzuhui-10c1e.appspot.com/o/others%2F202004%2F1587695028692-ic_keyboard_arrow_up_24px.svg?alt=media&token=538d0f43-c8ac-4443-a60e-1558b37c05b4"
+                alt="">
+              <img class="up"
+                src="https://firebasestorage.googleapis.com/v0/b/tzuhui-10c1e.appspot.com/o/others%2F202004%2F1587695018338-ic_keyboard_arrow_up_24px%20(1).svg?alt=media&token=3d310376-7621-47cd-9617-0c2eb588a504"
+                alt="">
+            </a>
+          </div>
+          <div class="card-item-body">
+            <p>A1.我牌鏡框搭配薄型非球面鏡片1480元，搭配功能型鏡片則依鏡片種類加價購買。當日購買JINS盒裝眼鏡，搭配薄型非球面鏡片980元(隔日後則為1480元)，搭配功能型鏡片則依鏡片種類加價購買。
+              他牌鏡框，搭配薄型非球面鏡片1980元，搭配功能型鏡片則依鏡片種類加價購買。</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" type="text/javascript"></script>
+  <script>
+
+
+
+    $('.ham-icon').click(function (e) {
+      e.preventDefault();
+      $('.dropdown').toggleClass('active')
+    })
+
+    // //隱藏向上的箭頭
+    // $('.down').hide();
+    // //隱藏所有的 card 內文
+    // $('.card-item-body').hide();
+    // //預設讓第一個 li 加上 active
+    // $('.card-item').eq(0).addClass('active');
+    // //預設讓第一個 li 內文顯示
+    // $('.card-item-body').eq(0).show();
+
+
+    // // 點擊 li
+    // $('.card-item').click(function (e) {
+    //   //取消預設 event 事件
+    //   e.preventDefault();
+    //   //加上 active 屬性，並把其他有 active 的移除
+    //   $(this).toggleClass('active').siblings().removeClass('active')
+    //   $(this).find('.up,.down').toggle()
+    //   //有 active 的話
+    //   if ($(this).hasClass('active')) {
+    //     //讓內文展開
+    //     $(this).children().next().slideDown();
+    //     //變換icon 上下的圖示
+
+    //   } else {
+    //     // 沒有 active 的話讓內文收起來
+    //     $(this).children().next().slideUp();
+
+    //   }
+    // })
+
+
+    // 隱藏所有的 li 內文
+    $('.card-item-body').hide();
+    //預設讓第一個 li 加上 active
+    $('.card-item').eq(0).addClass('active');
+    //預設讓第一個 li 內文 顯示
+    $('.card-item-body').eq(0).show();
+
+    // 點擊 li
+    $('.card-item').click(function (e) {
+      //取消預設 event 事件
+      e.preventDefault();
+      //加上 active 屬性，並把其他有 active 的移除
+      $(this).toggleClass('active').siblings().removeClass('active');
+      // 讓自己的 li body 切換收合
+      $(this).children().next().slideToggle();
+      // 讓其他 li body 收合
+      $(this).siblings().children().next().slideUp();
+    })
+
+  </script>
+</body>
+
+</html>

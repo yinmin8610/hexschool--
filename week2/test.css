@@ -1,0 +1,98 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* css reset end */
+
+.title {
+  font-size: 64px;
+  line-height: 75px;
+  padding-top: 64px;
+}
+
+.text-p {
+  /* font-style: normal; */
+  font-size: 20px;
+  line-height: 42px;
+}
+
+.text-white {
+  color: white;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mb-16{
+  margin-bottom: 128px;
+}
+.work {}
+
+.work-list {
+  background-image: url(./img/bg.png);
+  padding-bottom: 160px;
+}
+.bg-cover{
+  background-position: center center; 
+    /* 圖片位置置中 x y */
+  background-repeat: no-repeat;
+    /* 圖片不要重複 */
+  background-size: cover;
+  /* 圖片覆蓋整個區塊 */
+}
+
+.work-list-item:first-child {
+
+  margin-top: -80px;
+}
