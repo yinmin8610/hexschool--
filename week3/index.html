@@ -5,1023 +5,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>眼鏡官網</title>
-  <style>
-    html,
-    body,
-    div,
-    span,
-    applet,
-    object,
-    iframe,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p,
-    blockquote,
-    pre,
-    a,
-    abbr,
-    acronym,
-    address,
-    big,
-    cite,
-    code,
-    del,
-    dfn,
-    em,
-    img,
-    ins,
-    kbd,
-    q,
-    s,
-    samp,
-    small,
-    strike,
-    strong,
-    sub,
-    sup,
-    tt,
-    var,
-    b,
-    u,
-    i,
-    center,
-    dl,
-    dt,
-    dd,
-    ol,
-    ul,
-    li,
-    fieldset,
-    form,
-    label,
-    legend,
-    table,
-    caption,
-    tbody,
-    tfoot,
-    thead,
-    tr,
-    th,
-    td,
-    article,
-    aside,
-    canvas,
-    details,
-    embed,
-    figure,
-    figcaption,
-    footer,
-    header,
-    hgroup,
-    menu,
-    nav,
-    output,
-    ruby,
-    section,
-    summary,
-    time,
-    mark,
-    audio,
-    video {
-      margin: 0;
-      padding: 0;
-      border: 0;
-      font-size: 100%;
-      font: inherit;
-      vertical-align: baseline;
-    }
-
-    /* HTML5 display-role reset for older browsers */
-    article,
-    aside,
-    details,
-    figcaption,
-    figure,
-    footer,
-    header,
-    hgroup,
-    menu,
-    nav,
-    section {
-      display: block;
-    }
-
-    body {
-      line-height: 1;
-    }
-
-    ol,
-    ul {
-      list-style: none;
-    }
-
-    blockquote,
-    q {
-      quotes: none;
-    }
-
-    blockquote:before,
-    blockquote:after,
-    q:before,
-    q:after {
-      content: '';
-      content: none;
-    }
-
-    table {
-      border-collapse: collapse;
-      border-spacing: 0;
-    }
-
-    /* css reset end */
-
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-    }
-
-    html,
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", Roboto, "Helvetica Neue", Arial, sans-serif;
-    }
-
-    body {
-      font-size: 16px;
-      line-height: 1.5;
-    }
-
-    img {
-      /* RWD */
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    h1 {
-      font-size: 4rem;
-      font-weight: bolder;
-    }
-
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 3rem;
-      }
-    }
-
-    @media (max-width: 375px) {
-      h1 {
-        font-size: 2rem;
-      }
-    }
-
-    /* header */
-
-    .header {
-      padding: 2.5rem 5.5rem;
-    }
-
-    .header-list {
-      display: flex;
-      align-items: center;
-    }
-
-    .header-list a {
-      display: block;
-      font-size: 1.25rem;
-      margin-right: 4rem;
-    }
-
-    .header-list li:last-child a {
-      margin-right: 0;
-    }
-
-    @media (max-width: 768px) {
-      .header {
-        padding: 1.875rem 3rem;
-      }
-
-      .header-list a {
-        margin-right: 2.5rem;
-      }
-    }
-
-    /* banner */
-
-    .banner {
-      background-image: url(./img/banner.png);
-      height: 840px;
-    }
-
-    .banner-content {
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
-      flex-direction: column;
-      height: 100%;
-      font-size: 36px;
-    }
-
-    @media (max-width: 768px) {
-      .banner-content p {
-        font-size: 1.25rem;
-      }
-    }
-
-    @media (max-width: 375px) {
-      .banner {
-        background-image: url(./img/banner-sm.png);
-        height: 394px;
-      }
-
-      .banner-content p {
-        font-size: 1rem;
-      }
-    }
-
-    /* about */
-
-    .about-list li {
-      width: 25%;
-      margin-right: 1.5rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    @media (max-width: 768px) {
-      .about-list {
-        flex-wrap: wrap;
-      }
-
-      .about-list li {
-        width: 46%;
-        margin-bottom: 12px;
-      }
-
-      /* .about-list li:nth-last-child() {
-        margin-bottom: 0;
-      } */
-
-    }
-
-    .about-list li:last-child {
-      margin-right: 0;
-    }
-
-    .about-list img {
-      margin-bottom: 2.5rem;
-    }
-
-    .about-list h3 {
-      margin-bottom: 0.25rem;
-      font-size: 1.5rem;
-      color: #650300;
-      font-weight: bolder;
-    }
-
-    @media (max-width: 375px) {
-      .about-list li {
-        width: 100%;
-        margin-bottom: 0;
-      }
-    }
-
-    /* product */
-
-    .product-list li {
-      display: flex;
-      margin-bottom: 2rem;
-    }
-
-    .product-list img,
-    .p-img {
-      width: 50%;
-    }
-
-    .product-list li:last-child {
-      margin-bottom: 0;
-    }
-
-    .product-list h3 {
-      font-size: 3rem;
-      color: #AA0601;
-      text-transform: uppercase;
-      display: flex;
-      align-items: center;
-      font-style: italic;
-      font-weight: bolder;
-      margin-left: 1.5rem;
-    }
-
-    .product-list li:nth-child(2) h3 {
-      margin-right: 1.5rem;
-    }
-
-    .product-list li:nth-child(2) img {
-      width: 100%;
-    }
-
-    .p-img {
-      position: relative;
-    }
-
-    .p-img::before {
-      content: '';
-      background: url("./img/product-2-color.png") no-repeat;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      opacity: 0;
-      background-size: contain;
-    }
-
-    .p-img:hover::before {
-      opacity: 1;
-    }
-
-    @media (max-width: 768px) {
-      .product-list li {
-        margin-bottom: 0.5rem;
-      }
-
-      .product-list h3 {
-        font-size: 1.75rem;
-        justify-content: center;
-      }
-
-      .product-list li:nth-child(2) {
-        flex-direction: row-reverse;
-        justify-content: flex-end;
-      }
-
-      .product-list li:nth-child(2) h3 {
-        margin-right: 0;
-      }
-    }
-
-    @media (max-width: 375px) {
-      .product-list li {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .product-list h3 {
-        color: white;
-        position: absolute;
-        margin-left: 0;
-      }
-
-      .product-list img,
-      .p-img {
-        width: 100%;
-      }
-
-      .product-list li:nth-child(2) {
-        justify-content: center;
-      }
-
-      .product-list li:nth-child(2) h3 {
-        z-index: 1;
-      }
-    }
-
-
-    /* others */
-
-    .others {
-      background-image: url(./img/bg.png);
-      padding-bottom: 479px;
-    }
-
-    .others-list li:first-child {
-      margin-bottom: 3.75rem;
-    }
-
-    .others-list-item-brand {
-      position: relative;
-    }
-
-    .others-list-item-brand::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: rgba(255, 255, 255, 0.5);
-    }
-
-    .others-list span {
-      font-size: 72px;
-      color: #AA0601;
-      font-weight: bold;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 10000;
-      white-space: nowrap;
-    }
-
-    .others-list-item-brand:first-of-type {
-      margin-right: 1.875rem;
-    }
-
-    @media (max-width: 768px) {
-      .others {
-        padding-bottom: 417px;
-      }
-
-      .others-list li:first-child {
-        margin-bottom: 2.5rem;
-      }
-
-      .others-list {
-        max-width: 672px;
-        margin: 0 auto;
-      }
-
-      .others-list span {
-        font-size: 32px;
-      }
-
-      .others-list span:first-of-type {
-        font-size: 40px;
-      }
-
-      .others-list-item-brand:first-of-type {
-        margin-right: 1.5rem;
-      }
-
-    }
-
-    @media (max-width: 375px) {
-      .others {
-        padding-bottom: 189px;
-      }
-
-      .others-list li:first-child {
-        margin-bottom: 1.25rem;
-      }
-
-      .others-list {
-        max-width: 352px;
-        margin: 0 auto;
-      }
-
-      .others-list span:first-of-type {
-        font-size: 26px;
-      }
-
-      .others-list-item-brand:first-of-type {
-        margin-bottom: 1.25rem;
-        margin-right: 0;
-      }
-
-      .others-list li:last-child {
-        flex-direction: column;
-      }
-
-    }
-
-    .more {
-      align-items: flex-end;
-    }
-
-    .more-img {
-      position: relative;
-      height: 100%;
-      display: flex;
-      max-width: 30%;
-      transition: all .65s .3s;
-      transform: translateX(0px);
-      margin-right: 85px;
-    }
-
-    .more-img::after {
-      content: "";
-      position: absolute;
-      background: white;
-      top: 8%;
-      bottom: 8%;
-      left: 10%;
-      right: -85px;
-    }
-
-
-    .more-img span {
-      padding: 5px 0 5px 32px;
-    }
-
-    .more span::before {
-      content: 'MORE';
-      position: absolute;
-      transition: all .65s .3s;
-      transform: translateY(0px);
-    }
-
-    .more span:hover::before {
-      transform: translateY(-85px);
-      opacity: .7;
-    }
-
-    .more span::after {
-      content: 'MORE';
-      position: absolute;
-      transition: all .65s .3s;
-      transform: translateY(0px);
-    }
-
-    .more span:hover::after {
-      transform: translateY(-145px);
-      opacity: .4;
-    }
-
-    .more-img:hover img:last-child {
-      transform: translateX(15px);
-    }
-
-    @media(max-width: 768px) {
-
-      .more-img {
-        margin-right: 49px;
-      }
-
-      .more-img::after {
-        right: -49px;
-      }
-    }
-
-    @media(max-width: 375px) {
-      .more {
-        align-items: flex-start;
-      }
-
-      .more-img {
-        margin-right: 0;
-      }
-
-      .more-img::after {
-        right: 0;
-      }
-    }
-
-    /* rec */
-
-    .rec {
-      margin-top: -398px;
-    }
-
-    .rec-list li {
-      width: 25%;
-      margin-right: 1.5rem;
-      background-color: white;
-    }
-
-    .rec-list img {
-      margin-bottom: 1rem;
-    }
-
-    .rec-list-body {
-      border: 1px solid #DEE2E6;
-      margin-top: -1rem;
-    }
-
-    .rec-list .rec-list-body {
-      padding: 1rem;
-    }
-
-    .rec-list-body h4 {
-      font-weight: bold;
-      margin-bottom: 1rem;
-    }
-
-    .rec-list-body p {
-      margin-bottom: 1rem;
-    }
-
-    .rec-list-body h5 {
-      color: #707070;
-    }
-
-    @media (max-width: 768px) {
-      .rec {
-        margin-top: -416px;
-      }
-
-      .rec-list {
-        flex-wrap: wrap;
-      }
-
-      .rec-list li {
-        width: 46%;
-        margin-bottom: 1.5rem;
-      }
-    }
-
-    @media (max-width: 375px) {
-      .rec {
-        margin-top: -189px;
-      }
-
-      .rec-list li {
-        width: 100%;
-        margin-right: 0;
-        margin-bottom: 1rem;
-      }
-
-      .rec-list img {
-        width: 100%;
-      }
-    }
-
-    /* contact */
-
-    .contact-inner {
-      width: 80%;
-    }
-
-    .contact-inner p:first-of-type {
-      font-size: 1.25rem;
-      margin-bottom: 1.25rem;
-    }
-
-    .contact-form-group {
-      margin-bottom: 1rem;
-    }
-
-    .contact-form-group input,
-    .contact-form-group textarea {
-      display: block;
-      width: 100%;
-      background-color: transparent;
-      border: 1px solid #000000;
-      padding: 1rem;
-    }
-
-    .contact-form-group input[type=checkbox] {
-      width: auto;
-      margin-right: 0.25rem;
-    }
-
-    .contact-form-group input::placeholder,
-    .contact-form-group textareat::placeholder {
-      color: black;
-      opacity: .2;
-    }
-
-    .contact-form .btn {
-      background-color: #AA0601;
-      color: white;
-      width: 180px;
-      padding: 1rem;
-      display: block;
-      text-align: center;
-      font-weight: bold;
-    }
-
-    /* footer */
-
-    .footer {
-      padding: 2.5rem 0;
-    }
-
-    .footer-list {
-      display: flex;
-      align-items: center;
-    }
-
-    .footer-list a {
-      display: block;
-
-      margin-right: 3rem;
-    }
-
-    .title {
-      font-size: 3rem;
-      padding-top: 4rem;
-      padding-bottom: 3.75rem;
-      color: #650300;
-      font-weight: bolder;
-      text-align: center;
-    }
-
-    .footer-nav p {
-      font-size: 2.25rem;
-    }
-
-    /* .footer-nav p:nth-last-child() {
-      font-size: 1rem;
-    } */
-
-    .footer-nav:first-child {
-      margin-bottom: 1.5rem;
-    }
-
-    .footer-nav-map li {
-      margin-right: 3rem;
-    }
-
-
-    .footer-nav-info li {
-      margin-bottom: 1rem;
-    }
-
-    .footer-nav-map li:last-child {
-      margin-right: 0;
-    }
-
-    .footer-nav:first-child ul:last-child li {
-      margin-right: 2rem;
-    }
-
-    .footer-nav:first-child ul:last-child li:last-child {
-      margin-right: 0rem;
-    }
-
-    .footer-nav img {
-      margin-right: 1rem;
-    }
-
-
-    @media (max-width: 768px) {
-      .title {
-        font-size: 2rem;
-        padding-top: 2.5rem;
-        padding-bottom: 2rem;
-      }
-
-      .footer-nav:first-child img {
-        width: 24px;
-      }
-
-      .footer-nav-map li {
-        margin-right: 2.5rem;
-      }
-
-      .footer-nav:first-child ul:last-child li {
-        margin-right: 1.5rem;
-      }
-
-      .footer-nav-info li:nth-child(1) img {
-        width: 23px;
-      }
-
-      .footer-nav-info li:nth-child(2) img {
-        width: 32px;
-      }
-
-
-      .footer-nav p {
-        font-size: 1.25rem;
-      }
-
-      .footer-nav p:last-child {
-        font-size: 1rem;
-      }
-
-      .footer-nav:last-child ul:last-child li img {
-        display: none;
-      }
-    }
-
-    @media (max-width: 375px) {
-      .title {
-        font-size: 1.5rem;
-        padding-top: 1.5rem;
-        padding-bottom: 1rem;
-      }
-
-      .footer {
-        padding: 1.5rem 0;
-      }
-
-      .footer-nav:first-child {
-        display: none;
-      }
-
-      /* .footer-nav-info li:nth-child(2) {
-        padding-bottom: 1rem;
-        margin-bottom: 1rem
-      } */
-
-      .footer-nav-info li:nth-child(1) img {
-        width: 13px;
-      }
-
-      .footer-nav-info li:nth-child(2) img {
-        width: 20px;
-      }
-
-      .footer-nav-info li:nth-child(3) img {
-        width: 46px;
-        height: 28px;
-      }
-
-      .footer-nav p {
-        font-size: 1rem;
-      }
-
-      .footer-nav-info p {
-        font-size: 1rem;
-      }
-
-      .footer-nav-info p:last-child {
-        font-size: 0.875rem;
-      }
-
-      .footer-nav-info li img:last-child {
-        display: block;
-      }
-    }
-
-    .text-bolder {
-      font-weight: bold;
-    }
-
-    .text-center {
-      text-align: center;
-    }
-
-    .text-white {
-      color: white;
-    }
-
-
-
-    .title3 {
-      font-size: 36px;
-    }
-
-    .text-p {
-      font-size: 16px;
-    }
-
-    .title4 {
-      font-size: 20px;
-    }
-
-    .text-primary {
-      color: #650300;
-    }
-
-    /* .text-secondary{
-      color: #AA0601;
-    } */
-
-
-
-
-
-    .bg-cover {
-      background-position: center center;
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
-
-    .bg-dark {
-      background-color: #AA0601;
-      color: white;
-    }
-
-    .bg-light {
-      background-color: #AA06010D;
-    }
-
-
-
-
-
-
-    .d-flex {
-      display: flex;
-    }
-
-    .flex-wrap {
-      flex-wrap: wrap;
-    }
-
-    .flex-center {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .flex-column {
-      flex-direction: column;
-    }
-
-    .justify-center {
-      justify-content: center;
-    }
-
-
-    .justify-between {
-      justify-content: space-between;
-    }
-
-    .align-baseline {
-      align-items: baseline;
-    }
-
-    .align-end {
-      align-items: flex-end;
-    }
-
-
-
-
-
-
-    .pb-5 {
-      padding-bottom: 5rem;
-    }
-
-    .pb-10 {
-      padding-bottom: 5rem;
-    }
-
-    @media (max-width: 768px) {
-      .pb-10 {
-        padding-bottom: 2.5rem;
-      }
-    }
-
-    @media (max-width: 375px) {
-      .pb-10 {
-        padding-bottom: 1.5rem;
-      }
-    }
-
-    .mb-1 {
-      margin-bottom: 0.5rem;
-    }
-
-    @media(max-width: 375px) {
-      .mb-1 {
-        margin-bottom: 0.125rem;
-      }
-    }
-
-    .mb-5 {
-      margin-bottom: 40px;
-    }
-
-    .mb-60 {
-      margin-bottom: 60px;
-    }
-
-    .mr-1 {
-      margin-right: 8px;
-    }
-
-    @media(max-width: 375px) {
-      .mr-1 {
-        margin-right: 0.125rem;
-      }
-    }
-
-
-
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    @media (max-width: 768px) {
-      .container {
-        max-width: 672px;
-      }
-    }
-
-    @media (max-width: 375px) {
-      .container {
-        max-width: 352px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="index.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
 </head>
 
 <body>
-
-
-
-  <header class="header bg-dark d-flex justify-between">
+  <header class="header bg-dark d-flex">
+    <a href="#" class="ham-icon">
+      <img src="./img/icon-menu.svg" alt="">
+    </a>
     <img src="./img/logo.png" alt="">
     <ul class="header-list">
       <li><a href="#">系列鏡框</a></li>
@@ -1045,22 +37,22 @@
         <ul class="about-list d-flex align-baseline">
           <li>
             <img src="./img/icon-dollar.svg" alt="">
-            <h3>單一價格</h3>
+            <h4>單一價格</h4>
             <p class="text-p">無論任何度數皆不需追加費用<br>即可擁有適合自己的薄型球面<br>鏡片。</p>
           </li>
           <li>
             <img src="./img/icon-clock.svg" alt="">
-            <h3>20 分鐘即可取件</h3>
+            <h4>20 分鐘即可取件</h4>
             <p class="text-p">為了您的寶貴時間著想，以豐<br>富專業知識與技術將結帳到交<br>件的時間縮減至最快 20 分鐘<br>即可完成。</p>
           </li>
           <li>
             <img src="./img/icon-heart.svg" alt="">
-            <h3>安心售後服務</h3>
+            <h4>安心售後服務</h4>
             <p class="text-p">我們提供長達 120 天的保固售<br>後服務，不限會員資格皆享有<br>免費深層保養及專業維修服<br>務。</p>
           </li>
           <li>
             <img src="./img/icon-glasses.svg" alt="">
-            <h3>關於鏡片</h3>
+            <h4>關於鏡片</h4>
             <p class="text-p">使用世界知名頂級品牌，抗<br>UV、防汙鍍膜薄型非球面鏡<br>片。</p>
           </li>
         </ul>
@@ -1073,30 +65,27 @@
         <h2 class="title">經典系列鏡框</h2>
         <ul class="product-list">
           <li>
-
             <img src="./img/product-1.png" alt="">
-
-
-            <h3>
+            <h2>
               <img src="./img/icon-diamond.svg" alt="">
               optical
-            </h3>
+            </h2>
           </li>
           <li>
-            <h3>
+            <h2>
               <img src="./img/icon-sun.svg" alt="">
               sunglasses
-            </h3>
+            </h2>
             <div class="p-img">
               <img src="./img/product-2.png" alt="">
             </div>
           </li>
           <li>
             <img src="./img/product-3.png" alt="">
-            <h3>
+            <h2>
               <img src="./img/icon-thunder.svg" alt="">
               functional
-            </h3>
+            </h2>
           </li>
         </ul>
       </div>
@@ -1155,12 +144,12 @@
               <img src="./img/rec-1.png" alt="">
             </div>
             <div class="rec-list-body">
-              <h4>Jessy</h4>
+              <p>Jessy</p>
               <p>This is a wider card with supporting text below as a natural lead-in to additional content. This
                 content
                 is
                 a little bit longer.</p>
-              <h5>Last updated 3 mins ago</h5>
+              <p>Last updated 3 mins ago</p>
             </div>
           </li>
           <li>
@@ -1168,12 +157,12 @@
               <img src="./img/rec-2.png" alt="">
             </div>
             <div class="rec-list-body">
-              <h4>Karen</h4>
+              <p>Karen</p>
               <p>This is a wider card with supporting text below as a natural lead-in to additional content. This
                 content
                 is
                 a little bit longer.</p>
-              <h5>Last updated 3 mins ago</h5>
+              <p>Last updated 3 mins ago</p>
             </div>
           </li>
           <li>
@@ -1186,7 +175,7 @@
                 content
                 is
                 a little bit longer.</p>
-              <h5>Last updated 3 mins ago</h5>
+              <p>Last updated 3 mins ago</p>
             </div>
           </li>
           <li>
@@ -1194,12 +183,12 @@
               <img src="./img/rec-4.png" alt="">
             </div>
             <div class="rec-list-body">
-              <h4>Jane</h4>
+              <p>Jane</p>
               <p>This is a wider card with supporting text below as a natural lead-in to additional content. This
                 content
                 is
                 a little bit longer.</p>
-              <h5>Last updated 3 mins ago</h5>
+              <p>Last updated 3 mins ago</p>
             </div>
           </li>
         </ul>
@@ -1213,20 +202,20 @@
           <p>我們相當重視您的意見，若您有任何疑問，可先參考「常見問題」，若仍有任何問題， 請填妥以下資料，我們會在近期與您聯繫。</p>
           <form class="contact-form container">
             <div class="contact-form-group">
-              <label for="">姓名</label>
-              <input type="text" placeholder="陳小明">
+              <label for="name">姓名</label>
+              <input type="text" placeholder="陳小明" name="name">
             </div>
             <div class="contact-form-group">
-              <label for="">聯絡電話</label>
-              <input type="text" placeholder="0912-345-678">
+              <label for="phone">聯絡電話</label>
+              <input type="text" placeholder="0912-345-678" name="phone">
             </div>
             <div class="contact-form-group">
-              <label for="">電子郵件</label>
-              <input type="email" placeholder="example@email.com">
+              <label for="mail">電子郵件</label>
+              <input type="email" placeholder="example@email.com" name="mail">
             </div>
             <div class="contact-form-group">
-              <label for="">意見反應</label>
-              <textarea rows="8" placeholder="請輸入您的意見"></textarea>
+              <label for="report">意見反應</label>
+              <textarea rows="8" placeholder="請輸入您的意見" name="report"></textarea>
             </div>
             <div class="contact-form-group d-flex" style="align-items: baseline;">
               <input type="checkbox">
@@ -1282,7 +271,12 @@
     </div>
   </footer>
 
-
+  <script>
+    $('.ham-icon').click(function (e) {
+      e.preventDefault();
+      $('.header-list').toggleClass('active')
+    })
+  </script>
 
 </body>
 
