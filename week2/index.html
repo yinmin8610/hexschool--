@@ -5,431 +5,120 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>個人網頁</title>
-  <style>
-    html,
-    body,
-    div,
-    span,
-    applet,
-    object,
-    iframe,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p,
-    blockquote,
-    pre,
-    a,
-    abbr,
-    acronym,
-    address,
-    big,
-    cite,
-    code,
-    del,
-    dfn,
-    em,
-    img,
-    ins,
-    kbd,
-    q,
-    s,
-    samp,
-    small,
-    strike,
-    strong,
-    sub,
-    sup,
-    tt,
-    var,
-    b,
-    u,
-    i,
-    center,
-    dl,
-    dt,
-    dd,
-    ol,
-    ul,
-    li,
-    fieldset,
-    form,
-    label,
-    legend,
-    table,
-    caption,
-    tbody,
-    tfoot,
-    thead,
-    tr,
-    th,
-    td,
-    article,
-    aside,
-    canvas,
-    details,
-    embed,
-    figure,
-    figcaption,
-    footer,
-    header,
-    hgroup,
-    menu,
-    nav,
-    output,
-    ruby,
-    section,
-    summary,
-    time,
-    mark,
-    audio,
-    video {
-      margin: 0;
-      padding: 0;
-      border: 0;
-      font-size: 100%;
-      font: inherit;
-      vertical-align: baseline;
-    }
-
-    /* HTML5 display-role reset for older browsers */
-    article,
-    aside,
-    details,
-    figcaption,
-    figure,
-    footer,
-    header,
-    hgroup,
-    menu,
-    nav,
-    section {
-      display: block;
-    }
-
-    body {
-      line-height: 1;
-    }
-
-    ol,
-    ul {
-      list-style: none;
-    }
-
-    blockquote,
-    q {
-      quotes: none;
-    }
-
-    blockquote:before,
-    blockquote:after,
-    q:before,
-    q:after {
-      content: '';
-      content: none;
-    }
-
-    table {
-      border-collapse: collapse;
-      border-spacing: 0;
-    }
-
-    /* css reset end */
-
-    *,*::before,*::after {
-      box-sizing: border-box;
-    }
-
-    html,
-    body {
-      font-family: 'Roboto', sans-serif;
-      font-weight: bolder;
-      font-size: 24px;
-      line-height: 36px;
-      font-style: italic;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    h1 {
-      font-size: 80px;
-      line-height: 94px;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .title {
-      font-size: 64px;
-      line-height: 75px;
-      padding-top: 64px;
-    }
-
-    .subtitle {
-      font-size: 24px;
-      line-height: 42px;
-    }
-
-    .text-p {
-      /* font-style: normal; */
-      font-size: 20px;
-      line-height: 42px;
-    }
-
-    .text-center {
-      text-align: center;
-    }
-
-    .text-white {
-      color: white;
-    }
-
-    .bg-dark {
-      background-color: #000000;
-      color: white;
-    }
-
-    .bg-cover {
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-
-    .d-flex {
-      display: flex;
-    }
-
-    .flex-wrap {
-      flex-wrap: wrap;
-    }
-
-    .flex-column {
-      flex-direction: column;
-    }
-
-    .flex-center {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .mr-3 {
-      margin-right: 24px;
-    }
-
-    .mb-1 {
-      margin-bottom: 16px;
-    }
-
-    .mb-3 {
-      margin-bottom: 24px;
-    }
-
-    .mb-4 {
-      margin-bottom: 32px;
-    }
-
-    .mb-5 {
-      margin-bottom: 40px;
-    }
-
-    .mb-6 {
-      margin-bottom: 48px;
-    }
-
-    .mb-7 {
-      margin-bottom: 56px;
-    }
-
-    .mb-8 {
-      margin-bottom: 64px;
-    }
-
-    .mb-16 {
-      margin-bottom: 128px;
-    }
-
-    .header {
-      padding: 252px 0 256px 0;
-    }
-
-    .header-list li {
-      margin-right: 16px;
-    }
-
-    .header-list li:last-child {
-      margin-right: 0;
-    }
-
-    .about img {
-      display: inline;
-      vertical-align: middle;
-    }
-
-    .about-info li {
-      margin-bottom: 8px;
-    }
-
-    .about-info li:last-child {
-      margin-bottom: 32px;
-      padding-bottom: 32px;
-      border-bottom: 1px solid black
-    }
-
-    .about-exp {
-      position: relative; 
-    }
-
-    .about-exp li::before {
-      position: absolute;
-      content: '';
-      width: 22px;
-      height: 22px;
-      background-color: #891818;
-      border-radius: 50%;
-      transform: translateY(50%) translateX(-38px);
-    }
-
-    .about-exp li {
-      margin-bottom: 32px;
-    }
-
-    .about-exp li:last-child {
-      margin-bottom: 0;
-    }
-
-    .work-list {
-      background-image: url(./img/bg.png);
-      margin-top: 80px;
-    }
-
-    .work-list li img {
-      margin-bottom: 16px;
-    }
-
-    .work-list-item:nth-of-type(1) {
-      margin-top: -80px;
-    }
-
-    .work-list-item li {
-      margin-right: 24px;
-    }
-
-    .work-list-item li:last-child {
-      margin-right: 0;
-    }
-
-    .brand,
-    .work-list {
-      padding-bottom: 160px;
-    }
-
-    .contact {
-      padding-bottom: 80px;
-    }
-  </style>
+  <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
   <!-- header+(main>section*3)+footer -->
 
   <header class="header flex-center flex-column bg-cover text-white" style="background-image: url(./img/banner.png);">
-    <h1 class="mb-4"><span class="subtitle">Here’s</span><br>JOANNE</h1>
-    <h3 class="subtitle mb-8">Founder of "XXXD Official"<br> & Graphic Designer</h3>
-    <ul class="header-list d-flex">
-      <li><a href="#"><img src="./img/behance.svg" alt="icon-behance"></a></li>
-      <li><a href="#"><img src="./img/facebook.svg" alt="icon-facebook"></a></li>
-      <li><a href="#"><img src="./img/instagram.svg" alt="icon-instagram"></a></li>
-      <li><a href="#"><img src="./img/youtube.svg" alt="icon-youtube"></a></li>
-    </ul>
+    <div class="container">
+      <h1 class="mb-4"><span class="subtitle">Here’s</span><br>JOANNE</h1>
+      <h3 class="subtitle mb-8">Founder of "XXXD Official"<br> & Graphic Designer</h3>
+      <ul class="header-list d-flex">
+        <li><a href="#"><img src="./img/behance.svg" alt="icon-behance"></a></li>
+        <li><a href="#"><img src="./img/facebook.svg" alt="icon-facebook"></a></li>
+        <li><a href="#"><img src="./img/instagram.svg" alt="icon-instagram"></a></li>
+        <li><a href="#"><img src="./img/youtube.svg" alt="icon-youtube"></a></li>
+      </ul>
+    </div>
   </header>
 
   <main>
     <section class="about flex-center flex-column text-center mb-7">
-      <h2 class="title mb-5">About</h2>
-      <img class="mb-3" src="./img/photo.png" alt="photo">
+      <div class="container">
+        <h2 class="title mb-5">About</h2>
+        <img class="mb-3" src="./img/photo.png" alt="photo">
 
-      <ul class="about-info">
-        <li class="subtitle">Joanne Chen</li>
-        <li class="subtitle">1997/10/10</li>
-        <li>National Hex School Normal University <br>Department of Visual Design</li>
-      </ul>
-      <ul class="about-exp subtitle">
-        <li>Founder of "XXXD Official"</li>
-        <li>Graphic Designer</li>
-        <li>Graphic Intern of Hex School</li>
-      </ul>
+        <ul class="about-info">
+          <li class="subtitle">Joanne Chen</li>
+          <li class="subtitle">1997/10/10</li>
+          <li>National Hex School Normal University <br>Department of Visual Design</li>
+        </ul>
+        <ul class="about-exp subtitle">
+          <li>Founder of "XXXD Official"</li>
+          <li>Graphic Designer</li>
+          <li>Graphic Intern of Hex School</li>
+        </ul>
+      </div>
     </section>
 
     <section class="brand bg-dark text-center">
-      <h2 class="title mb-1">My Brand "XXXD"</h2>
-      <h3 class="subtitle mb-4">Just Keep XXXD Everyday</h3>
-      <p class="text-p mb-6">2020 年創立的個人服飾品牌<br>引領叛逆少年開啟與社會對話的窗口<br>主打概念潮流T-Shirt</p>
+      <div class="container">
+        <h2 class="title mb-1">My Brand "XXXD"</h2>
+        <h3 class="subtitle mb-4">Just Keep XXXD Everyday</h3>
+        <p class="text-p mb-6"><i>2020 </i>年創立的個人服飾品牌<br>引領叛逆少年開啟與社會對話的窗口<br>主打概念潮流<i>T-Shirt</i></p>
 
-      <ul class="brand-list flex-center flex-wrap">
-        <li><img class="mb-5" src="./img/brand_img1.png" alt=""></li>
-        <li><img class="mr-3" src="./img/brand_img2.png" alt=""></li>
-        <li><img src="./img/brand_img3.png" alt=""></li>
-      </ul>
+        <ul class="brand-list flex-center flex-wrap">
+          <li><img class="mb-5" src="./img/brand_img1.png" alt=""></li>
+          <li><img class="mr-3" src="./img/brand_img2.png" alt=""></li>
+          <li><img src="./img/brand_img3.png" alt=""></li>
+        </ul>
+      </div>
     </section>
 
     <section class="work text-center">
+
       <h2 class="title mb-3">Other Works</h2>
-      <p class="text-p mb-16">2016-2020 年累積的作品<br>海報/廣告/攝影/LOGO/3D</p>
+      <p class="text-p mb-16"><i>2016-2020 </i>年累積的作品<br>海報/廣告/攝影/<i>LOGO</i>/<i>3D</i></p>
 
       <div class="work-list bg-cover text-white flex-center flex-column">
-        <ul class="work-list-item col mb-7 d-flex">
-          <li>
-            <img src="./img/work_img1.png" alt="">
-            <p class="text-p">海報設計/2017</p>
-          </li>
-          <li>
-            <img src="./img/work_img2.png" alt="">
-            <p class="text-p">海報設計/2018</p>
-          </li>
-          <li>
-            <img src="./img/work_img3.png" alt="">
-            <p class="text-p">海報設計/2018</p>
-          </li>
-        </ul>
-        <ul class="work-list-item col mb-7 d-flex">
-          <li>
-            <img src="./img/work_img4.png" alt="">
-            <p class="text-p">概念攝影/2018</p>
-          </li>
-          <li>
-            <img src="./img/work_img5.png" alt="">
-            <p class="text-p">概念攝影/2018</p>
-          </li>
-        </ul>
-        <ul class="work-list-item col d-flex">
-          <li>
-            <img src="./img/work_img6.png" alt="">
-            <p class="text-p">sasa 酒標設計/2019</p>
-          </li>
-          <li>
-            <img src="./img/work_img7.png" alt="">
-            <p class="text-p">攝影創作/2018</p>
-          </li>
-          <li>
-            <img src="./img/work_img8.png" alt="">
-            <p class="text-p">官網設計/2020</p>
-          </li>
-        </ul>
+        <div class="container">
+          <ul class="work-list-item col mb-7 d-flex">
+            <li>
+              <figure>
+                <img src="./img/work_img1.png" alt="">
+                <figcaption class="text-p">海報設計/<i>2017</i></figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure>
+                <img src="./img/work_img2.png" alt="">
+                <figcaption class="text-p">海報設計/<i>2018</i></figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure>
+                <img src="./img/work_img3.png" alt="">
+                <figcaption class="text-p">海報設計/<i>2018</i></figcaption>
+              </figure>
+            </li>
+          </ul>
+          <ul class="work-list-item col mb-7 d-flex">
+            <li>
+              <figure>
+                <img src="./img/work_img4.png" alt="">
+                <figcaption class="text-p">概念攝影/<i>2018</i></figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure>
+                <img src="./img/work_img5.png" alt="">
+                <figcaption class="text-p">概念攝影/<i>2018</i></figcaption>
+              </figure>
+            </li>
+          </ul>
+          <ul class="work-list-item col d-flex">
+            <li>
+              <figure>
+                <img src="./img/work_img6.png" alt="">
+                <figcaption class="text-p">sasa 酒標設計/<i>2019</i></figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure>
+                <img src="./img/work_img7.png" alt="">
+                <figcaption class="text-p">攝影創作/<i>2018</i></figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure>
+                <img src="./img/work_img8.png" alt="">
+                <figcaption class="text-p">官網設計/<i>202</i>0</figcaption>
+              </figure>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
 
@@ -438,8 +127,8 @@
   <footer class="contact bg-dark text-center">
     <div class="container">
       <h2 class="title mb-1">Contact</h2>
-      <p class="mb-1"><a href="href=" mailto:xxxd@hexschool.com">Mail：xxxd@hexschool.com</a></p>
-      <p>Phone Number：0910123456</p>
+      <p class="mb-1"><a href="mailto:xxxd@hexschool.com">Mail：xxxd@hexschool.com</a></p>
+      <p><a href="tel:0910123456">Phone Number：0910123456</a></p>
     </div>
   </footer>
 </body>
