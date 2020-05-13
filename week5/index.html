@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>後台</title>
+  
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+    integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/index.min.css">
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Bootstrap Js -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+    integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+    integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="wrap">
+    <header class="sidebar">
+      <div class="container h-100 ">
+        <h1 class="text-hide"
+          style="background-image: url('./img/logo-ANSWER.svg');height: 38px;background-repeat: no-repeat;"><a
+            href="index.html">ANSWER</a></h1>
+        <!-- nav -->
+        <ul class="nav flex-column">
+          <li class="nav-item d-flex align-items-center">
+            <i class="material-icons">insert_chart</i>
+            <a class="nav-link active" href="#">Dashboard</a>
+          </li>
+          <li class="nav-item d-flex align-items-center">
+            <i class="material-icons">forum</i>
+            <a class="nav-link" href="#">Question</a>
+          </li>
+          <li class="nav-item d-flex align-items-center">
+            <i class="material-icons">assignment</i>
+            <a class="nav-link" href="#">Assignment</a>
+          </li>
+          <li class="nav-item d-flex align-items-center">
+            <i class="material-icons">video_library</i>
+            <a class="nav-link" href="#">Course</a>
+          </li>
+          <li class="nav-item d-flex align-items-center">
+            <i class="material-icons">supervisor_account</i>
+            <a class="nav-link" href="admin.html">Admin</a>
+          </li>
+          <li class="nav-item d-flex align-items-center">
+            <i class="material-icons">settings</i>
+            <a class="nav-link" href="#">Settings</a>
+          </li>
+        </ul>
+
+        <div class="mt-auto d-flex">
+          <img class="rounded-circle mr-3" width=40 height=40 src="./img/andychen.jpeg" alt="">
+          <div>
+            <h5 class="mb-1">Andy Chen</h5>
+            <small class="text-secondary">andy0401@mail.com</small>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="container">
+        <section class="d-flex align-items-center py-5 mb-3">
+          <h2 class="mr-5">Assignment</h2>
+          <!-- dropDown -->
+          <div class="dropdown mr-auto">
+            <a class="btn d-flex" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              All Courses
+              <i class="material-icons">expand_more</i>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </div>
+          <div class="">
+            <i class="material-icons mr-3">search</i>
+            <i class="material-icons">notifications_active</i>
+          </div>
+        </section>
+
+        <section>
+          <div class="row">
+            <div class="col-4">
+              <h2>All (4)<i class="material-icons">expand_more</i></h2>
+              <!-- listGroup -->
+              <div class="list-group">
+                <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list"
+                  href="#list-home" role="tab" aria-controls="home">
+                  <div class="d-flex w-100 justify-content-between">
+                    <p>Chapter Assignment 2</p>
+                    <small>4 hrs ago</small>
+                  </div>
+                  <div class="d-flex  w-100 justify-content-between">
+                    <h5 class="mb-1">Please check this file…</h5>
+                    <small class="text-secondary">Emily Wang</small>
+                  </div>
+                </a>
+                <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list"
+                  href="#list-profile" role="tab" aria-controls="profile">
+                  <div class="d-flex w-100 justify-content-between">
+                    <p>Chapter Assignment 1</p>
+                    <small>12 hrs ago</small>
+                  </div>
+                  <div class="d-flex  w-100 justify-content-between">
+                    <h5 class="mb-1">My Homework</h5>
+                    <small class="text-secondary">David Xu</small>
+                  </div>
+                </a>
+                <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list"
+                  href="#list-messages" role="tab" aria-controls="messages">
+                  <div class="d-flex w-100 justify-content-between">
+                    <p>Final Assignment</p>
+                    <small>19 hrs ago</small>
+                  </div>
+                  <div class="d-flex  w-100 justify-content-between">
+                    <h5 class="mb-1">Did I do it right?</h5>
+                    <small class="text-secondary">Christina Lin</small>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="col-8">
+              <p class="text-right text-secondary">2 comments</p>
+              <!-- card -->
+              <div class="card mb-3">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                  <div>
+                    <p>Chapter Assignment 2 / HTML&CSS</p>
+                    <h2>Please check this file for me, thanks!</h2>
+                  </div>
+                  <a href="#" role="button"><i class="material-icons">more_vert</i></a>
+                </div>
+                <div class="card-body">
+                  <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="list-home" role="tabpanel"
+                      aria-labelledby="list-home-list">
+                      <!-- mediaObject -->
+                      <ul class="list-unstyled">
+                        <li class="media border-bottom pb-3">
+                          <img class="rounded-circle mr-3" width=40 height=40 src="./img/emilywang.jpeg" alt="">
+                          <div class="media-body">
+                            <h5 class="mt-0 mb-1">Emily Wang</h5>
+                            <small class="text-secondary">10:38 AM (4 hours ago)</small>
+                            <p>Hi Teacher, the attached file is my homework of chapter 2. And here comes a question:
+                              Why
+                              in the following code the height of the <code>div</code> is bigger than the height of
+                              the
+                              <code>img</code> ? There is a gap below the image, but it doesn’t seems to be a
+                              padding/margin. What is the gap or extra space below image?</p>
+                            <a class="btn btn-primary" href="#" role="button">HW-2-David.zip</a>
+                          </div>
+                        </li>
+                        <li class="media my-4">
+                          <img class="rounded-circle mr-3" width=40 height=40 src="./img/andychen.jpeg" alt="">
+                          <div class="media-body">
+                            <div class="d-flex justify-content-between">
+                              <div>
+                                <h5 class="mt-0 mb-1">Andy Chen (You)</h5>
+                                <small>13:24 AM (1 hours ago)</small>
+                              </div>
+                              <div>
+                                <a class="mr-4" href="#" role="button"><i class="material-icons">star_border</i></a>
+                                <a href="#" role="button"><i class="material-icons">edit</i></a>
+                              </div>
+                            </div>
+                            <p>Hi David, by default, an image is rendered inline, like a letter so it sits on the same
+                              line that a, b, c and d sit on. There is space below that line for the descenders you
+                              find
+                              on letters like g, j, p and q.
+                              You can:
+                              <ul>
+                                <li>
+                                  adjust the <code>vertical-align</code> of the image to position it elsewhere (e.g.
+                                  the
+                                  <code>middle</code> ) or 　
+                                </li>
+                                <li>
+                                  change the <code>display</code> so it isn’t inline.
+                                </li>
+
+                              </ul>
+                            </p>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+                      ...
+                    </div>
+                    <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
+                      ...
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="d-flex justify-content-between">
+                <div>
+                  <a href="#" role="button"><i class="material-icons">chevron_left</i></a>
+                  <a href="#" role="button"><i class="material-icons">chevron_right</i></a>
+                </div>
+                <div>
+                  <button type="button" class="btn btn-outline-primary">Mark as read</button>
+                  <input class="btn btn-primary" type="submit" value="Reply">
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </section>
+      </div>
+    </main>
+  </div>
+</body>
+
+</html>
