@@ -111,12 +111,10 @@ h1 {
   display: none;
 }
 
-
-
 @media (max-width: 992px) {
   .header {
     position: relative;
-    padding: 1.875rem 3rem;
+    padding: 10px 0;
     justify-content: center;
     align-items: center;
   }
@@ -134,7 +132,6 @@ h1 {
   .header-list.active {
     max-height: 252px;
   }
-  
   .header-list li a {
     display: block;
     width: 100%;
@@ -149,7 +146,7 @@ h1 {
     background: #8f0400;
   }
   .header-list a {
-    margin-right: 2.5rem;
+    padding-right: 2.5rem;
   }
   .ham-icon {
     display: block;
@@ -321,7 +318,7 @@ h1 {
     margin-left: 0;
     z-index: 1;
   }
-  .product-list h2 img{
+  .product-list h2 img {
     filter: brightness(500);
   }
   .product-list img, .p-img {
@@ -625,78 +622,74 @@ h1 {
 
 .footer {
   padding: 2.5rem 0;
+  background: #aa0601;
+  color: #ffffff;
 }
 
-.footer-list {
+.footer-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid white;
 }
 
-.footer-list a {
-  display: block;
-  margin-right: 3rem;
+.footer-info-map {
+  margin-bottom: 2rem;
+  display: flex;
 }
 
-.footer-nav p {
+
+.footer-info-map-item {
+  padding-right: 3rem;
+}
+
+
+.footer-info-map-item:last-child {
+  padding-right: 0;
+}
+
+.footer-info-contact {
+  padding-bottom: 1.5rem;
   font-size: 2.25rem;
 }
 
-/* .footer-nav p:nth-last-child() {
-  font-size: 1rem;
-} */
 
-.footer-nav:first-child {
-  margin-bottom: 1.5rem;
+.footer-info-social-item {
+  padding-right: 2rem;
+}
+.footer-copyright-item {
+  align-items: center;
+}
+.footer-copyright-link {
+  margin-right: 3.875rem;
 }
 
-.footer-nav-map li {
-  margin-right: 3rem;
-}
-
-.footer-nav-info li {
-  margin-bottom: 1rem;
-}
-
-.footer-nav-map li:last-child {
+.footer-copyright-link:last-of-type {
   margin-right: 0;
 }
 
-.footer-nav:first-child ul:last-child li {
-  margin-right: 2rem;
-}
-
-.footer-nav:first-child ul:last-child li:last-child {
-  margin-right: 0rem;
-}
-
-.footer-nav img {
-  margin-right: 1rem;
-}
-
 @media (max-width: 992px) {
-  .footer-nav:first-child img {
+  .footer img {
     width: 24px;
+    height: 24px;
   }
-  .footer-nav-map li {
-    margin-right: 2.5rem;
+  .footer-info-map {
+    margin-bottom: 1.5rem;
+    display: none;
   }
-  .footer-nav:first-child ul:last-child li {
-    margin-right: 1.5rem;
+  .footer-info-map-item {
+    padding-right: 2.5rem;
   }
-  .footer-nav-info li:nth-child(1) img {
-    width: 23px;
-  }
-  .footer-nav-info li:nth-child(2) img {
-    width: 32px;
-  }
-  .footer-nav p {
+  .footer-info-contact {
     font-size: 1.25rem;
   }
-  .footer-nav p:last-child {
-    font-size: 1rem;
+  .footer-info-social-item {
+    padding-right: 1.5rem;
   }
-  .footer-nav:last-child ul:last-child li img {
-    display: none;
+  .footer-copyright-link {
+    margin-right: 3rem;
   }
 }
 
@@ -704,34 +697,29 @@ h1 {
   .footer {
     padding: 1.5rem 0;
   }
-  .footer-nav:first-child {
-    display: none;
+  .footer-info {
+    margin-bottom: 1rem;
   }
-  /* .footer-nav-info li:nth-child(2) {
-    padding-bottom: 1rem;
-    margin-bottom: 1rem
-  } */
-  .footer-nav-info li:nth-child(1) img {
+  .footer-info-contact {
+    font-size: 1rem;
+  }
+  .footer-info-contact img {
     width: 13px;
+    height: 13px;
   }
-  .footer-nav-info li:nth-child(2) img {
-    width: 20px;
+  .footer-copyright-list {
+    flex-direction: column;
+    background-image: url("./img/logo.png");
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-size: 46px 27px;
   }
-  .footer-nav-info li:nth-child(3) img {
-    width: 46px;
-    height: 28px;
+  .footer-copyright-item {
+    flex-direction: column;
+    align-items: normal;
   }
-  .footer-nav p {
-    font-size: 1rem;
-  }
-  .footer-nav-info p {
-    font-size: 1rem;
-  }
-  .footer-nav-info p:last-child {
-    font-size: 0.875rem;
-  }
-  .footer-nav-info li img:last-child {
-    display: block;
+  .footer-copyright-item img{
+    display: none;
   }
 }
 
@@ -833,6 +821,9 @@ h1 {
 
 .align-baseline {
   align-items: baseline;
+}
+.align-items-center{
+  align-items: center;
 }
 
 .pb-10 {
