@@ -1,0 +1,48 @@
+a {
+  color: black;
+}
+code {
+  color: #2b8256;
+  background: #edf4ee;
+  padding: 3px;
+  border-radius: 2px;
+}
+.material-icons {
+  &.dark {
+    color: #2b8256;
+  }
+  &.danger{
+    color: $danger;
+  }
+}
+.material-icons.md-20 {
+  font-size: 20px;
+}
+.h1 {
+  font-size: $font-size-base * 2.5;
+}
+.h2 {
+  font-size: $font-size-base * 2;
+}
+.h3 {
+  font-size: $font-size-base * 1.75;
+}
+.h4 {
+  font-size: $font-size-base * 1.5;
+}
+.h5 {
+  font-size: $font-size-base * 1.25;
+}
+.h6 {
+  font-size: $font-size-base;
+}
+
+.main {
+  margin-left: 295px;
+}
+.list-group-item {
+  &.active {
+    color: $black;
+    border-color: #cdddcd;
+  }
+}
