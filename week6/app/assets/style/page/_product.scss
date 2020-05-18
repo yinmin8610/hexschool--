@@ -1,0 +1,12 @@
+.product-navbar a {
+  color: $secondary;
+  &.active {
+    color: $primary;
+  }
+}
+nav a {
+  color: $dark;
+  &.active {
+    color: $primary;
+  }
+}

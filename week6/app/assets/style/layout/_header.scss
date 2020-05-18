@@ -1,0 +1,68 @@
+.sidebar {
+  width: 295px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+}
+.nav-link {
+  &:hover {
+    color: #2a8356;
+  }
+}
+.nav-item {
+  margin-bottom: 22px;
+  position: relative;
+  &:hover {
+    color: #2a8356;
+    &::before {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 4px;
+      background-color: #2a8356;
+      height: 100%;
+      left: -1rem;
+    }
+  }
+}
+.navbar{
+  z-index: 1;
+  color:$white;
+}
+.navbar-brand{
+  font-style: italic;
+}
+.modal.right .modal-dialog {
+  // position: fixed;
+  margin: auto;
+  width: 320px;
+  height: 100%;
+  transform: translate3d(0%, 0, 0);
+}
+
+.modal.right .modal-content {
+  height: 100%;
+  overflow-y: auto;
+}
+
+
+.modal.right.fade .modal-dialog {
+  right: -320px;
+  transition: opacity 0.3s linear, right 0.3s ease-out;
+}
+
+.modal.right.fade.in .modal-dialog {
+  right: 0;
+}
+
+.modal-content {
+  border-radius: 0;
+  border: none;
+}
+
+.modal-header {
+  border-bottom: none;
+}
+.modal-footer{
+border-top:none;
+}

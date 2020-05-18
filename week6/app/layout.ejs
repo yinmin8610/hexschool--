@@ -1,0 +1,134 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%- title %></title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+    integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <!-- My CSS -->
+  <link rel="stylesheet" href="./assets/style/all.css">
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light bg-transparent px-0">
+
+        <button class="navbar-toggler border-0 pl-0" type="button" data-toggle="collapse"
+          data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <i class="material-icons">dehaze</i>
+        </button>
+
+        <a class="navbar-brand" href="index.html">CRAFTsMAN</a>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class=" active">
+              <a class="nav-link" href="product.html">Product</a>
+            </li>
+            <li class="">
+              <a class="nav-link" href="blog.html">Blog</a>
+            </li>
+            <li class="">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <a class="nav-link pr-0" href="#" data-toggle="modal" data-target="#exampleModal">
+          <i class="material-icons">shopping_cart</i>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <%- contents %>
+
+  <div class="jumbotron jumbotron-fluid mb-0 text-white"
+    style="background-image: url('./assets/images/footer.jpg');height:400px;background-position: center center; background-repeat: no-repeat; background-size: cover;">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-5">
+          <h1 class="display-4">Subscribe for news<br> and special offers!</h1>
+          <div class="input-group input-group-lg">
+            <input type="text" class="form-control" placeholder="Your email address" aria-label="Recipient's username"
+              aria-describedby="button-addon2">
+            <div class="input-group-append">
+              <button class="btn btn-primary" type="button" id="button-addon2">Subscribe</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="bg-dark">
+    <ul class="navbar navbar-dark container list-unstyled mb-0">
+      <li>
+        <a class="navbar-brand text-white">CRAFTsMAN</a>
+      </li>
+      <li class="mr-auto">
+        <a class="text-white" href="#">© 2020. All Rights Reserved.</a>
+      </li>
+
+      <li>
+        <a class="nav-link" href="#">Purchase Policy</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Privacy Policy</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Terms & Conditions</a>
+      </li>
+    </ul>
+  </footer>
+
+
+  <!-- Modal -->
+  <div class="modal right fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Cart List<sup>3</sup></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"><i class="material-icons">clear</i></span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="card mb-3" style="max-width: 540px;">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img src="./assets/images/img-1.jpg" width="112" height="112" style="object-fit: cover;" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Tatami Cup</h5>
+                  <p class="card-text">NT$1,080<span class="text-secondary"><s>NT$1,200</s></span></p>
+                  <div class="btn-group w-25" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-light"><i class="material-icons">remove</i></button>
+                    <span class="btn btn-light">1</span>
+                    <button type="button" class="btn btn-light"><i class="material-icons">add</i></button>
+                  </div>
+                  <p class="card-text">NT$1,080</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="checkout1.html" class="btn btn-primary">Checkout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./assets/js/vendors.js"></script>
+  <script src="./assets/js/all.js"></script>
+</body>
+
+</html>
