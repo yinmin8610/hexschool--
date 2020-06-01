@@ -262,6 +262,7 @@ a {
 .header {
   height: 960px;
   background-attachment: fixed;
+  background-image: url(./img/banner.png);
 }
 
 .header-list li {
