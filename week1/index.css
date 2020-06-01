@@ -189,16 +189,13 @@ img {
   background-color: #96A9C4;
   right: 0;
   left: 0;
-  top: 71px;
-  bottom: 65px;
+  transform: translateY(25%);
+  height: 360px;
   z-index: -1;
 }
 
 .skills-content {
   padding: 24px 102px 56px 102px;
-  /* display: flex;
-  flex-direction: column; */
-  /* align-items: center; */
 }
 
 .skills-content ul {
@@ -254,6 +251,7 @@ img {
 .text-link {
   text-decoration: none;
   display: block;
+  color: inherit;
 }
 
 .text-center {
@@ -316,7 +314,7 @@ img {
   justify-content: center;
 }
 
-footer {
+.contact {
   padding: 24px 0 48px 0;
 }
 
