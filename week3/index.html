@@ -35,7 +35,7 @@
     <section class="about bg-light pb-10">
       <div class="container">
         <h2 class="title">用專業的心，做專業的事</h2>
-        <ul class="about-list d-flex align-baseline">
+        <ul class="about-list d-flex align-items-baseline">
           <li>
             <img src="./img/icon-dollar.svg" alt="">
             <h4>單一價格</h4>
@@ -67,13 +67,13 @@
         <ul class="product-list">
           <li>
             <img src="./img/product-1.png" alt="">
-            <h2>
+            <h2 class="text-secondary">
               <img src="./img/icon-diamond.svg" alt="">
               optical
             </h2>
           </li>
           <li>
-            <h2>
+            <h2 class="text-secondary">
               <img src="./img/icon-sun.svg" alt="">
               sunglasses
             </h2>
@@ -83,7 +83,7 @@
           </li>
           <li>
             <img src="./img/product-3.png" alt="">
-            <h2>
+            <h2 class="text-secondary">
               <img src="./img/icon-thunder.svg" alt="">
               functional
             </h2>
@@ -97,7 +97,7 @@
       <h2 class="title text-white">聯名設計鏡框</h2>
 
       <ul class="others-list">
-        <li class="others-list-item d-flex justify-center">
+        <li class="others-list-item d-flex justify-content-center">
           <div class="mr-1">
             <img src="./img/product-4.png" alt="">
           </div>
@@ -115,7 +115,7 @@
 
                 <div class="more-img">
                   <img src="./img/more.png" alt="">
-                  <span class="d-flex">MORE <img src="./img/icon-arrow.svg" alt=""></span>
+                  <span class="d-flex text-secondary">MORE <img src="./img/icon-arrow.svg" alt=""></span>
                 </div>
               </div>
             </div>
@@ -124,11 +124,11 @@
         <li class="others-list-item container d-flex">
           <div class="others-list-item-brand">
             <img src="./img/product-8.png" alt="">
-            <span>Double A+</span>
+            <span class="text-secondary">Double A+</span>
           </div>
           <div class="others-list-item-brand">
             <img src="./img/product-9.png" alt="">
-            <span>YOUTH</span>
+            <span class="text-secondary">YOUTH</span>
           </div>
         </li>
       </ul>
@@ -145,12 +145,12 @@
               <img src="./img/rec-1.png" alt="">
             </div>
             <div class="rec-list-body">
-              <p>Jessy</p>
+              <p class="text-bolder">Jessy</p>
               <p>This is a wider card with supporting text below as a natural lead-in to additional content. This
                 content
                 is
                 a little bit longer.</p>
-              <p>Last updated 3 mins ago</p>
+              <p class="text-gray">Last updated 3 mins ago</p>
             </div>
           </li>
           <li>
@@ -158,12 +158,12 @@
               <img src="./img/rec-2.png" alt="">
             </div>
             <div class="rec-list-body">
-              <p>Karen</p>
+              <p class="text-bolder">Karen</p>
               <p>This is a wider card with supporting text below as a natural lead-in to additional content. This
                 content
                 is
                 a little bit longer.</p>
-              <p>Last updated 3 mins ago</p>
+              <p class="text-gray">Last updated 3 mins ago</p>
             </div>
           </li>
           <li>
@@ -171,12 +171,12 @@
               <img src="./img/rec-3.png" alt="">
             </div>
             <div class="rec-list-body">
-              <h4>Chelsea</h4>
+              <p class="text-bolder">Chelsea</p>
               <p>This is a wider card with supporting text below as a natural lead-in to additional content. This
                 content
                 is
                 a little bit longer.</p>
-              <p>Last updated 3 mins ago</p>
+              <p class="text-gray">Last updated 3 mins ago</p>
             </div>
           </li>
           <li>
@@ -184,12 +184,12 @@
               <img src="./img/rec-4.png" alt="">
             </div>
             <div class="rec-list-body">
-              <p>Jane</p>
+              <p class="text-bolder">Jane</p>
               <p>This is a wider card with supporting text below as a natural lead-in to additional content. This
                 content
                 is
                 a little bit longer.</p>
-              <p>Last updated 3 mins ago</p>
+              <p class="text-gray">Last updated 3 mins ago</p>
             </div>
           </li>
         </ul>
@@ -205,25 +205,25 @@
           <form class="contact-form container">
             <div class="contact-form-group">
               <label for="name">姓名</label>
-              <input type="text" placeholder="陳小明" name="name">
+              <input type="text" placeholder="陳小明" id="name" name="name">
             </div>
             <div class="contact-form-group">
               <label for="phone">聯絡電話</label>
-              <input type="text" placeholder="0912-345-678" name="phone">
+              <input type="text" placeholder="0912-345-678" id="phone" name="phone">
             </div>
             <div class="contact-form-group">
               <label for="mail">電子郵件</label>
-              <input type="email" placeholder="example@email.com" name="mail">
+              <input type="email" placeholder="example@email.com" id="mail" name="mail">
             </div>
             <div class="contact-form-group">
               <label for="report">意見反應</label>
-              <textarea rows="8" placeholder="請輸入您的意見" name="report"></textarea>
+              <textarea rows="8" placeholder="請輸入您的意見" id="report" name="report"></textarea>
             </div>
-            <div class="contact-form-group d-flex align-baseline">
+            <div class="contact-form-group d-flex align-items-baseline">
               <input type="checkbox">
               <p>我同意隱私權政策，並同意依隱私權政策中所述的方式處理自己的資料。</p>
             </div>
-            <div class="d-flex justify-center"><a href="#" class="btn">確認送出</a></div>
+            <div class="d-flex justify-content-center"><a href="#" class="btn">確認送出</a></div>
           </form>
         </div>
       </div>
@@ -260,7 +260,7 @@
         </ul>
       </nav>
       <nav class="footer-copyright">
-        <ul class="footer-copyright-list d-flex justify-between">
+        <ul class="footer-copyright-list d-flex justify-content-between">
           <li class="footer-copyright-item d-flex">
             <img class="mr-1" src="./img/logo.png" alt="">
             <p>Copyright © 2020 Glasses.All rights reserved.</p>
