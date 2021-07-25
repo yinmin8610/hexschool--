@@ -3,7 +3,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
+  /* font: inherit; */
   vertical-align: baseline;
 }
 
@@ -42,8 +42,50 @@ table {
   box-sizing: border-box;
 }
 
-html, body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", Roboto, "Helvetica Neue", Arial, sans-serif;
+body {
+  font-family: roboto-regular, noto-regular, -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+/* 中文 */
+@font-face {
+  font-family: noto-regular;
+  src: url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap") format('embedded-opentype');
+  unicode-range: U+4E00-9FFF;
+}
+@font-face {
+  font-family: noto-medium;
+  src: url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&display=swap") format('embedded-opentype');
+  unicode-range: U+4E00-9FFF;
+}
+@font-face {
+  font-family: noto-bold;
+  src: url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&display=swap") format('embedded-opentype');
+  unicode-range: U+4E00-9FFF;
+}
+/* 英文 */
+@font-face {
+  font-family: roboto-regular;
+  src: url("https://fonts.googleapis.com/css2?family=Roboto&display=swap") format('embedded-opentype');
+  unicode-range: U+00-024F;
+}
+@font-face {
+  font-family: roboto-medium;
+  src: url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap") format('embedded-opentype');
+  unicode-range: U+00-024F;
+}
+@font-face {
+  font-family: roboto-bold;
+  src: url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap") format('embedded-opentype');
+  unicode-range: U+00-024F;
+}
+@font-face {
+  font-family: roboto-black;
+  src: url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap") format('embedded-opentype');
+  unicode-range: U+00-024F;
+}
+@font-face {
+  font-family: roboto-italic;
+  src: url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&display=swap") format('embedded-opentype');
+  unicode-range: U+00-024F;
 }
 
 body {
@@ -64,6 +106,7 @@ a {
 }
 
 h1 {
+  font-family: "noto-bold";
   font-size: 4rem;
   font-weight: bolder;
 }
@@ -206,6 +249,7 @@ h1 {
 }
 
 .about-list h4 {
+  font-family: "noto-bold";
   margin-bottom: 0.25rem;
   font-size: 1.5rem;
   color: #650300;
@@ -354,6 +398,7 @@ h1 {
 }
 
 .others-list span {
+  font-family: "roboto-bold";
   font-size: 72px;
   font-weight: bold;
   position: absolute;
@@ -495,6 +540,7 @@ h1 {
 }
 
 .rec-list li {
+  font-family: "noto-regular";
   width: 25%;
   background-color: white;
   margin-right: 1.875rem;
@@ -715,6 +761,7 @@ h1 {
 }
 
 .title {
+  font-family: "noto-bold";
   font-size: 3rem;
   padding-top: 4rem;
   padding-bottom: 3.75rem;
